@@ -2,6 +2,25 @@
 (function () {
   "use strict";
 
+  /* ---------- Page loader (logo) ---------- */
+  const loader = document.querySelector("#page-loader");
+  if (loader) {
+    document.documentElement.classList.add("is-loading");
+    const MIN_MS = 700;
+    const started = performance.now();
+    const hide = () => {
+      const wait = Math.max(0, MIN_MS - (performance.now() - started));
+      window.setTimeout(() => {
+        loader.classList.add("is-done");
+        document.documentElement.classList.remove("is-loading");
+        loader.setAttribute("aria-busy", "false");
+        window.setTimeout(() => loader.remove(), 600);
+      }, wait);
+    };
+    if (document.readyState === "complete") hide();
+    else window.addEventListener("load", hide, { once: true });
+  }
+
   /* ---------- Header scroll ---------- */
   const header = document.querySelector(".site-header");
   const onScroll = () => {

@@ -14,6 +14,18 @@
   </script>
 </head>
 <body>
+
+  <div class="page-loader" id="page-loader" aria-live="polite" aria-busy="true" aria-label="Cargando">
+    <div class="page-loader__inner">
+      <div class="page-loader__mark">
+        <img class="page-loader__logo" src="/assets/logo/fhi-logo-white.svg" alt="FHI" width="112" height="108">
+        <span class="page-loader__ring" aria-hidden="true"></span>
+      </div>
+      <div class="page-loader__bar" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+  <script>document.documentElement.classList.add("is-loading");</script>
+
   <p>Redirecting to <a href="/es/">Español</a> / <a href="/en/">English</a>…</p>
 </body>
 </html>

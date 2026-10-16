@@ -20,6 +20,18 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+
+  <div class="page-loader" id="page-loader" aria-live="polite" aria-busy="true" aria-label="Loading">
+    <div class="page-loader__inner">
+      <div class="page-loader__mark">
+        <img class="page-loader__logo" src="/assets/logo/fhi-logo-white.svg" alt="FHI" width="112" height="108">
+        <span class="page-loader__ring" aria-hidden="true"></span>
+      </div>
+      <div class="page-loader__bar" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+  <script>document.documentElement.classList.add("is-loading");</script>
+
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfessionalService","name":"FHI Ingeniería","description":"Technical consulting specialized in tailings engineering, geotechnics and monitoring for mining.","url":"https://www.fhi.cl","logo":"https://www.fhi.cl/assets/logo/fhi-logo.svg","email":"contacto@fhi.cl","telephone":"+56 2 2345 6789","address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"},"areaServed":["CL","LATAM"],"knowsAbout":["Tailings Storage Facilities","Geotechnical Engineering","GISTM","InSAR"]}
   </script>
