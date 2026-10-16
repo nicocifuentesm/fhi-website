@@ -8,3 +8,5 @@ Imagen.svg
 *.log
 .venv/
 node_modules/
+.vercel
+.env*
