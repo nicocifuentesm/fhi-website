@@ -19,146 +19,103 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body>
+<body class="page-portal">
   <a class="skip-link" href="#main">Saltar al contenido</a>
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-header__logo" href="/es/index.html" aria-label="FHI">
-        <img class="logo-white" src="/assets/logo/fhi-logo-white.svg" alt="FHI" width="110" height="106">
-        <img class="logo-color" src="/assets/logo/fhi-logo.svg" alt="FHI" width="110" height="106">
-      </a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="/es/index.html">Inicio</a>
-        <a href="/es/nosotros.html">Nosotros</a>
-        <a href="/es/servicios.html">Servicios</a>
-        <a href="/es/proyectos.html">Proyectos</a>
-        <a href="/es/publicaciones.html">Publicaciones</a>
-        <a href="/es/contacto.html">Contacto</a>
-      </nav>
-      <div class="header-actions">
-        <a href="/es/portal.html" class="header-portal is-active">Portal</a>
-        <div class="lang-switch">
-          <a href="/es/portal.html" class="is-active">ES</a><span>|</span><a href="/en/portal.html">EN</a>
-        </div>
-        <a class="btn btn--primary btn--sm header-cta" href="/es/contacto.html">Hablemos</a>
-        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </header>
-  <nav class="mobile-nav" aria-label="Mobile">
-    <a href="/es/index.html">Inicio</a>
-    <a href="/es/nosotros.html">Nosotros</a>
-    <a href="/es/servicios.html">Servicios</a>
-    <a href="/es/proyectos.html">Proyectos</a>
-    <a href="/es/publicaciones.html">Publicaciones</a>
-    <a href="/es/contacto.html">Contacto</a>
-    <a href="/es/portal.html" class="is-active">Portal</a>
-    <a href="/es/empleo.html">Empleo</a>
-    <a href="/es/sostenibilidad.html">Sostenibilidad</a>
-    <div class="mobile-nav__cta"><a class="btn btn--primary" href="/es/contacto.html">Hablemos</a></div>
-    <div class="mobile-nav__lang"><a href="/es/portal.html" class="is-active">ES</a><a href="/en/portal.html">EN</a></div>
-  </nav>
 
-  <main id="main">
-    <section class="hero hero--page hero--layered" data-hero-layered>
-      <div class="hero__layers" aria-hidden="true">
-        <div class="hero__layer hero__layer--bg">
-          <img src="/assets/img/hero-layered-bg.webp" alt="" width="1920" height="1080" fetchpriority="high">
+  <main id="main" class="portal-auth">
+    <aside class="portal-auth__brand" aria-label="Marca FHI">
+      <div class="portal-auth__brand-bg" aria-hidden="true">
+        <img src="/assets/img/hero-layered-bg.webp" alt="" width="1200" height="1600" fetchpriority="high">
+        <div class="portal-auth__brand-overlay"></div>
+      </div>
+      <div class="portal-auth__brand-inner">
+        <a class="portal-auth__logo" href="/es/index.html" aria-label="FHI Ingeniería — Inicio">
+          <img src="/assets/logo/fhi-logo-white.svg" alt="FHI" width="88" height="84">
+          <span>FHI Ingeniería</span>
+        </a>
+
+        <div class="portal-auth__glass">
+          <div class="portal-auth__glass-top">
+            <span class="portal-auth__avatar" aria-hidden="true">FHI</span>
+            <div>
+              <strong>Portal clientes</strong>
+              <em>Acceso restringido</em>
+            </div>
+          </div>
+          <div class="portal-auth__bar" aria-hidden="true"><span></span></div>
+          <div class="portal-auth__glass-meta">
+            <span><i class="is-ok"></i> Entregables</span>
+            <span><i class="is-warn"></i> Monitoreo</span>
+            <span><i class="is-muted"></i> Seguimiento</span>
+          </div>
         </div>
-        <div class="hero__layer hero__layer--logo">
-          <img src="/assets/logo/fhi-logo-white-solid.svg" alt="" width="520" height="500">
-        </div>
-        <div class="hero__layer hero__layer--fg">
-          <img src="/assets/img/hero-layered-fg.png" alt="" width="1920" height="1080" fetchpriority="high">
+
+        <div class="portal-auth__copy">
+          <h1>Documentación técnica <em>con control y trazabilidad.</em></h1>
+          <p>Revise entregables, reportes de monitoreo e hitos de proyecto en un entorno confidencial gestionado por FHI.</p>
         </div>
       </div>
-      <div class="hero__overlay"></div>
-      <div class="hero__content"><div class="container">
-        <span class="overline">Acceso clientes</span>
-        <h1>Portal de proyectos</h1>
-      </div></div>
+    </aside>
+
+    <section class="portal-auth__panel" id="portal-login" aria-labelledby="portal-title">
+      <div class="portal-auth__panel-top">
+        <a class="portal-auth__back" href="/es/index.html">← Sitio web</a>
+        <div class="portal-auth__lang">
+          <a href="/es/portal.html" class="is-active">ES</a>
+          <span>|</span>
+          <a href="/en/portal.html">EN</a>
+        </div>
+      </div>
+
+      <div class="portal-auth__form-wrap">
+        <h2 id="portal-title">Bienvenido</h2>
+        <p class="portal-auth__sub">Ingrese con las credenciales entregadas por su jefe de proyecto.</p>
+
+        <div class="portal-auth__tabs" role="tablist" aria-label="Acceso">
+          <button type="button" class="is-active" role="tab" aria-selected="true">Iniciar sesión</button>
+          <a href="/es/contacto.html" role="tab" aria-selected="false">Solicitar acceso</a>
+        </div>
+
+        <div class="portal-msg" id="portal-msg" hidden role="status"></div>
+
+        <form id="portal-form" class="portal-auth__form" novalidate>
+          <div class="form-group portal-field">
+            <label for="portal-email">Email corporativo</label>
+            <div class="portal-field__control">
+              <svg class="portal-field__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+              <input id="portal-email" name="email" type="email" required autocomplete="username" placeholder="nombre@empresa.com">
+            </div>
+            <span class="form-error">Email inválido</span>
+          </div>
+
+          <div class="form-group portal-field">
+            <div class="portal-field__label-row">
+              <label for="portal-pass">Contraseña</label>
+              <a class="portal-auth__forgot" href="mailto:portal@fhi.cl?subject=Recuperar%20acceso%20portal%20FHI">¿Olvidó su contraseña?</a>
+            </div>
+            <div class="portal-field__control">
+              <svg class="portal-field__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+              <input id="portal-pass" name="password" type="password" required autocomplete="current-password" placeholder="••••••••">
+            </div>
+            <span class="form-error">Requerido</span>
+          </div>
+
+          <label class="portal-check">
+            <input type="checkbox" name="remember" value="1">
+            <span>Mantener sesión en este equipo</span>
+          </label>
+
+          <button class="btn btn--primary portal-auth__submit" type="submit">Entrar al portal</button>
+        </form>
+
+        <p class="portal-auth__footer">
+          ¿Aún no tiene credenciales?
+          <a href="/es/contacto.html">Solicitar acceso</a>
+        </p>
+      </div>
     </section>
-
-    <section class="section portal-section"><div class="container">
-      <div class="portal-grid">
-        <div class="portal-login reveal" id="portal-login">
-          <div class="portal-login__eyebrow">
-            <span class="overline" style="margin:0">Sesión segura</span>
-            <span class="portal-login__lock">Acceso restringido</span>
-          </div>
-          <h2 class="h3">Iniciar sesión</h2>
-          <p class="portal-login__lead">Ingrese con las credenciales entregadas por su jefe de proyecto FHI.</p>
-          <div class="portal-msg" id="portal-msg" hidden role="status"></div>
-          <form id="portal-form" novalidate>
-            <div class="form-group"><label for="portal-email">Email corporativo</label><input id="portal-email" name="email" type="email" required autocomplete="username" placeholder="nombre@empresa.com"><span class="form-error">Email inválido</span></div>
-            <div class="form-group"><label for="portal-pass">Contraseña</label><input id="portal-pass" name="password" type="password" required autocomplete="current-password"><span class="form-error">Requerido</span></div>
-            <button class="btn btn--primary" type="submit">Entrar al portal</button>
-          </form>
-          <div class="portal-login__meta">
-            <span>¿Sin acceso?</span>
-            <a class="link-animated" href="/es/contacto.html">Solicitar credenciales</a>
-            <a href="mailto:portal@fhi.cl">portal@fhi.cl</a>
-          </div>
-        </div>
-        <div class="portal-features reveal reveal-delay-1">
-          <div class="portal-aside__intro">
-            <span class="overline">Documentación de proyecto</span>
-            <p class="lead">Espacio confidencial para revisar entregables técnicos, monitoreo y seguimiento de obra con su equipo FHI.</p>
-          </div>
-          <div class="portal-feature"><strong>01</strong><div><h4>Entregables técnicos</h4><p>Informes, memorias de cálculo y planos controlados por versión.</p></div></div>
-          <div class="portal-feature"><strong>02</strong><div><h4>Monitoreo e instrumentación</h4><p>Reportes piezométricos, InSAR y umbrales de alerta acordados.</p></div></div>
-          <div class="portal-feature"><strong>03</strong><div><h4>Seguimiento de proyecto</h4><p>Hitos, actas de reunión y documentación de interfaces.</p></div></div>
-          <div class="portal-feature"><strong>04</strong><div><h4>Confidencialidad</h4><p>Acceso nominativo por usuario. Sin enlaces públicos compartidos.</p></div></div>
-          <div class="portal-trust">
-            <strong>Uso exclusivo clientes FHI</strong>
-            Las credenciales son personales e intransferibles. Ante dudas de acceso, contacte a su jefe de proyecto o a portal@fhi.cl.
-          </div>
-        </div>
-      </div>
-    </div></section>
   </main>
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="/assets/logo/fhi-logo-white.svg" alt="FHI" width="100" height="96">
-          <p>Consultoría técnica especializada en ingeniería de relaves, geotecnia y monitoreo para la minería.</p>
-        </div>
-        <div class="footer-col"><h4>Servicios</h4>
-          <a href="/es/servicios.html">Tranques de Relave</a>
-          <a href="/es/servicios.html#campanas">Campañas Geotécnicas</a>
-          <a href="/es/servicios.html#monitoreo">Monitoreo e InSAR</a>
-          <a href="/es/servicios.html#constructibilidad">Constructibilidad</a>
-          <a href="/es/servicios.html#gistm">Cumplimiento GISTM</a>
-        </div>
-        <div class="footer-col"><h4>Empresa</h4>
-          <a href="/es/nosotros.html">Nosotros</a>
-          <a href="/es/empleo.html">Empleo</a>
-          <a href="/es/sostenibilidad.html">Sostenibilidad</a>
-          <a href="/es/proyectos.html">Proyectos</a>
-          <a href="/es/contacto.html">Contacto</a>
-        </div>
-        <div class="footer-col"><h4>Recursos</h4>
-          <a href="/es/publicaciones.html">Publicaciones</a>
-          <a href="/es/portal.html">Portal clientes</a>
-          <a href="/es/contacto.html">Hablemos</a>
-        </div>
-        <div class="footer-col"><h4>Contacto</h4>
-          <a href="mailto:contacto@fhi.cl">contacto@fhi.cl</a>
-          <a href="tel:+56223456789">+56 2 2345 6789</a>
-          <a href="/es/contacto.html">Santiago, Chile</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© <span data-year>2026</span> FHI Ingeniería. Todos los derechos reservados.</p>
-        <div class="footer-legal">
-          <a href="/es/privacidad.html">Política de Privacidad</a>
-          <a href="/es/cookies.html">Cookies</a>
-          <a href="/es/accesibilidad.html">Accesibilidad</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+
   <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Consentimiento de cookies">
     <div class="cookie-banner__inner">
       <p>Utilizamos cookies necesarias y, con su consentimiento, cookies de análisis. Consulte nuestra <a href="/es/cookies.html">Política de Cookies</a> y <a href="/es/privacidad.html">Privacidad</a>.</p>
