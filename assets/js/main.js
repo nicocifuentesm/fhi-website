@@ -244,8 +244,8 @@
       msg.classList.add("is-error");
       msg.textContent =
         lang === "en"
-          ? "Portal credentials are issued by your FHI project lead. This demo form validates the login flow — connect SharePoint/SSO URL in production."
-          : "Las credenciales las entrega su jefe de proyecto FHI. Este formulario valida el flujo de acceso — conecte SharePoint/SSO en producción.";
+          ? "We could not validate these credentials. Please confirm your email and password with your FHI project lead, or write to portal@fhi.cl."
+          : "No fue posible validar estas credenciales. Confirme su email y contraseña con su jefe de proyecto FHI, o escriba a portal@fhi.cl.";
     });
   }
 

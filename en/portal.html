@@ -60,32 +60,57 @@
   </nav>
 
   <main id="main">
-    <section class="hero hero--page hero--portal">
-      <div class="hero__bg"><img src="/assets/img/monitoreo-insar.webp" alt="Project monitoring data" width="1920" height="1080" fetchpriority="high"></div>
+    <section class="hero hero--page hero--layered" data-hero-layered>
+      <div class="hero__layers" aria-hidden="true">
+        <div class="hero__layer hero__layer--bg">
+          <img src="/assets/img/hero-layered-bg.webp" alt="" width="1920" height="1080" fetchpriority="high">
+        </div>
+        <div class="hero__layer hero__layer--logo">
+          <img src="/assets/logo/fhi-logo-white-solid.svg" alt="" width="520" height="500">
+        </div>
+        <div class="hero__layer hero__layer--fg">
+          <img src="/assets/img/hero-layered-fg.png" alt="" width="1920" height="1080" fetchpriority="high">
+        </div>
+      </div>
       <div class="hero__overlay"></div>
       <div class="hero__content"><div class="container">
-        <h1>Client portal</h1>
-        <p class="lead">Secure access to deliverables, monitoring reports and project information. Credentials are issued by your FHI project lead.</p>
+        <span class="overline">Client access</span>
+        <h1>Project portal</h1>
       </div></div>
     </section>
-    <section class="section"><div class="container"><div class="portal-grid">
+    <section class="section portal-section"><div class="container"><div class="portal-grid">
       <div class="portal-login reveal" id="portal-login">
-        <h2 class="h3 mb-24">Sign in</h2>
+        <div class="portal-login__eyebrow">
+          <span class="overline" style="margin:0">Secure session</span>
+          <span class="portal-login__lock">Restricted access</span>
+        </div>
+        <h2 class="h3">Sign in</h2>
+        <p class="portal-login__lead">Use the credentials issued by your FHI project lead.</p>
         <div class="portal-msg" id="portal-msg" hidden role="status"></div>
         <form id="portal-form" novalidate>
-          <div class="form-group"><label for="portal-email">Work email</label><input id="portal-email" name="email" type="email" required autocomplete="username"><span class="form-error">Invalid email</span></div>
+          <div class="form-group"><label for="portal-email">Work email</label><input id="portal-email" name="email" type="email" required autocomplete="username" placeholder="name@company.com"><span class="form-error">Invalid email</span></div>
           <div class="form-group"><label for="portal-pass">Password</label><input id="portal-pass" name="password" type="password" required autocomplete="current-password"><span class="form-error">Required</span></div>
-          <button class="btn btn--primary" type="submit">Sign in</button>
-          <p class="form-note">Production access connects to your provider (e.g. SharePoint / client Drive managed by FHI). This UI validates the flow; wire the real endpoint at deploy time.</p>
+          <button class="btn btn--primary" type="submit">Enter portal</button>
         </form>
-        <p class="mt-24 text-muted">No credentials? <a class="link-animated" href="/en/contact.html">Request access</a> or email <a href="mailto:portal@fhi.cl">portal@fhi.cl</a>.</p>
+        <div class="portal-login__meta">
+          <span>No access yet?</span>
+          <a class="link-animated" href="/en/contact.html">Request credentials</a>
+          <a href="mailto:portal@fhi.cl">portal@fhi.cl</a>
+        </div>
       </div>
       <div class="portal-features reveal reveal-delay-1">
-        <h2 class="h3 mb-24">What you will find</h2>
-        <div class="portal-feature"><strong>01</strong><div><h4>Technical deliverables</h4><p>Reports, calculation notes and versioned drawings.</p></div></div>
-        <div class="portal-feature"><strong>02</strong><div><h4>Monitoring</h4><p>Piezometric, InSAR and alert-threshold reports.</p></div></div>
-        <div class="portal-feature"><strong>03</strong><div><h4>Project tracking</h4><p>Milestones, minutes and interface documentation.</p></div></div>
-        <div class="portal-feature"><strong>04</strong><div><h4>Security</h4><p>Per-user access — no public share links.</p></div></div>
+        <div class="portal-aside__intro">
+          <span class="overline">Project documentation</span>
+          <p class="lead">A confidential workspace to review technical deliverables, monitoring and project tracking with your FHI team.</p>
+        </div>
+        <div class="portal-feature"><strong>01</strong><div><h4>Technical deliverables</h4><p>Reports, calculation notes and version-controlled drawings.</p></div></div>
+        <div class="portal-feature"><strong>02</strong><div><h4>Monitoring &amp; instrumentation</h4><p>Piezometric, InSAR and agreed alert-threshold reports.</p></div></div>
+        <div class="portal-feature"><strong>03</strong><div><h4>Project tracking</h4><p>Milestones, meeting minutes and interface documentation.</p></div></div>
+        <div class="portal-feature"><strong>04</strong><div><h4>Confidentiality</h4><p>Named per-user access. No public share links.</p></div></div>
+        <div class="portal-trust">
+          <strong>FHI clients only</strong>
+          Credentials are personal and non-transferable. For access issues, contact your project lead or portal@fhi.cl.
+        </div>
       </div>
     </div></div></section>
   </main>
